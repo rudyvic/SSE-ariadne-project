@@ -39,10 +39,9 @@ inline AtomicHybridAutomaton getMotorControllers()
     RealVariable position_m("position_m");
     RealVariable velocity_m("velocity_m");
     RealVariable ref_m("ref_m");
-    RealVariable pos_err("pos_err");
 
     // Create the real assignment
-    RealAssignments moving_ass( let({torque_m,torque_s,pos_err}) = {Kp*(ref_m-velocity_m),Kp*(ref_s-position_s),position_m-position_s});
+    RealAssignments moving_ass( let({torque_m,torque_s}) = {Kp*(ref_m-velocity_m),Kp*(ref_s-position_s)});
 
     // Create the controllers automaton
     AtomicHybridAutomaton motorControllers("motorControllers");
