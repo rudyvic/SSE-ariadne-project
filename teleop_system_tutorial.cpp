@@ -114,10 +114,6 @@ Int main(Int argc, const char* argv[])
     plot("ariadne_pos_m",time_position_m_axes, Colour(0.0,0.5,1.0), orbit);
     std::cout << "pos_m done."<<std::endl;
 
-    Axes2d time_velocity_s_axes(start_time<=TimeVariable()<=exe_time, -axes_limits<=velocity_s<=axes_limits);
-    plot("ariadne_vel_s",time_velocity_s_axes, Colour(0.0,0.5,1.0), orbit);
-    std::cout << "vel_s done."<<std::endl;
-
     Axes2d time_velocity_m_axes(start_time<=TimeVariable()<=exe_time, -axes_limits<=velocity_m<=axes_limits);
     plot("ariadne_vel_m",time_velocity_m_axes, Colour(0.0,0.5,1.0), orbit);
     std::cout << "vel_m done."<<std::endl;
