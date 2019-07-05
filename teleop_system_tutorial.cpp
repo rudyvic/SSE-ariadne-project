@@ -47,7 +47,6 @@ Int main(Int argc, const char* argv[])
     RealVariable ref_m("ref_m");
     RealVariable old_ref_m("old_ref_m");
     RealVariable energy_tank_m("energy_tank_m");
-    RealVariable pos_err("pos_err");
 
     StringVariable motorControllers("motorControllers");
     StringVariable motorMaster("motorMaster");
@@ -106,10 +105,6 @@ Int main(Int argc, const char* argv[])
     Axes2d time_ref_m_axes(start_time<=TimeVariable()<=exe_time,-axes_limits<=ref_m<=axes_limits);
     plot("ariadne_ref_m",time_ref_m_axes, Colour(0.0,0.5,1.0), orbit);
     std::cout << "ref_m done."<<std::endl;
-
-    // Axes2d time_pos_err_axes(start_time<=TimeVariable()<=exe_time,-axes_limits<=pos_err<=axes_limits);
-    // plot("ariadne_pos_err",time_pos_err_axes, Colour(0.0,0.5,1.0), orbit);
-    // std::cout << "pos_err done."<<std::endl;
 
     Axes2d time_position_s_axes(start_time<=TimeVariable()<=exe_time,-axes_limits<=position_s<=axes_limits);
     plot("ariadne_pos_s",time_position_s_axes, Colour(0.0,0.5,1.0), orbit);
